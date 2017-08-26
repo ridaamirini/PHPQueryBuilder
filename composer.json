@@ -7,7 +7,7 @@
     ],
     "require": {
         "fpdo/fluentpdo": "dev-master",
-        "symfony/console": "^3.3.6"
+        "symfony/console": "3.3.6"
     },
     "require-dev": {
         "doctrine/instantiator": "^1.0.2",
