@@ -1,15 +1,4 @@
 #!/usr/bin/env php
 <?php
 
-
-require __DIR__ . '/../vendor/autoload.php';
-
-use Symfony\Component\Console\Application;
-
-$app = new Application();
-$app->setName('PHPQueryBuilder CLI');
-
-$app->add(new \App\Command\CommandVersion());
-$app->add(new \App\Command\CommandDump());
-
-$app->run();
+include __DIR__ . 'phpqb.php';

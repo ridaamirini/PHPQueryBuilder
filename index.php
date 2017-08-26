@@ -38,7 +38,6 @@ QueryBuilder::create()->select('hans')
                       ->limit(224)
                       ->collect($collection);
 
-$collection->dump(getcwd(). '/bla', 'bla', true);
 
 $update = QueryBuilder::create()->update('hans')
                                 ->set(['published_at' => new QueryBuilderLiteral('NOW()')])
@@ -74,7 +73,6 @@ QueryBuilder::create()->insert('dome', ['ha3ns' => 2123, 'dalsdk' => 'daiosdaios
 QueryBuilder::create()->insert('dome', ['ha4ns' => 2123, 'dalsdk' => 'daiosdaiosdj'])->collect($insertcollection);
 QueryBuilder::create()->insert('dome', ['ha5ns' => 2123, 'dalsdk' => 'daiosdaiosdj'])->collect($insertcollection);
 
-$insertcollection->dump(getcwd() . '/bla/', 'insert.sql');
 
 QueryBuilder::create()->select('hans')
     ->where('published_at > ?', 1)
@@ -90,4 +88,5 @@ QueryBuilder::create()->select('hans')
     ->limit(224)
     ->collect($collection);
 
-$collection->dump(getcwd(). '/bla', 'bla', true);
+
+new \App\Builder\QueryBuilderConfig();

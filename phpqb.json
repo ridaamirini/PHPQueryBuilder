@@ -1,0 +1,22 @@
+{
+    "folder":[
+        {
+            "from": "",
+            "to":""
+        }
+    ],
+    "files":[
+        {
+            "from": "",
+            "to":""
+        },
+        {
+            "from": "",
+            "to":""
+        }
+    ],
+    "excluded_folder":[
+
+    ],
+    "defaultDestination": ""
+}
