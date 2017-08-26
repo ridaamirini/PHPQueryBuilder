@@ -17,7 +17,7 @@ use App\Builder\Base\QueryBuilderWrapper;
 class QueryBuilder extends QueryBuilderWrapper
 {
     public static function create()
-   {
+    {
        return new self();
-   }
+    }
 }

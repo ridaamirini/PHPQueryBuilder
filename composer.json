@@ -6,12 +6,15 @@
         }
     ],
     "require": {
-        "fpdo/fluentpdo": "dev-master"
+        "fpdo/fluentpdo": "dev-master",
+        "symfony/console": "3.4.x-dev"
     },
     "require-dev": {
+        "doctrine/instantiator": "^1.0.2",
         "phpunit/phpunit": "^6.3"
     },
     "minimum-stability": "dev",
+    "bin": ["bin/phpqb"],
     "autoload": {
         "psr-4":{
             "App\\": "src/PHPQueryBuilder"

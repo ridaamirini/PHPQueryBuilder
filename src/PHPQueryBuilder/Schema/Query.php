@@ -14,6 +14,11 @@ class Query
     private $query_with_values;
     private $query;
 
+    public static function create()
+    {
+        return new self();
+    }
+
     /**
      * @return mixed
      */
@@ -24,10 +29,13 @@ class Query
 
     /**
      * @param mixed $query_with_values
+     *  @return $this
      */
     public function setQueryWithValues($query_with_values)
     {
         $this->query_with_values = $query_with_values;
+
+        return $this;
     }
 
     /**
@@ -39,10 +47,18 @@ class Query
     }
 
     /**
-     * @param mixed $query
+     * @param $query
+     * @return $this
      */
     public function setQuery($query)
     {
         $this->query = $query;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->getQueryWithValues() . ';' . PHP_EOL;
     }
 }

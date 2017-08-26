@@ -26,4 +26,9 @@ interface QueryInterface
      * @return mixed
      */
     public function getParameters();
+
+    /**
+     * @param $collection
+     */
+    public function collect(&$collection);
 }
