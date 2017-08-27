@@ -106,11 +106,13 @@ $query = QueryCollection::create()->update('article')->set($set)->where('id', 1)
 $query = QueryCollection::create()->update('article', $set, 1)->getQuery();
 ```
 
+##### DELETE
 ```php
 $query = QueryCollection::create()->delete('article')->where('id', 1)->getQuery();
 // or shortly if you delete one row by primary key
 $query = QueryCollection::create()->delete('article', 1)->getQuery();
 ```
+
 ## CRUD QueryCollection Examples and PHPQueryBuilder CLI
 
 ### Init config file
