@@ -6,7 +6,7 @@ php:
     - nightly
 
 before_script:
-  - composer install --no-dev
+  - composer install --ignore-platform-reqs
 
 addons:
   code_climate:
