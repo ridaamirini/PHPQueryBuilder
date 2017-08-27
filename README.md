@@ -113,7 +113,7 @@ $query = QueryCollection::create()->delete('article', 1)->getQuery();
 ```
 ## CRUD QueryCollection Examples and PHPQueryBuilder CLI
 
-## Init config file
+### Init config file
 	$ vendor/bin/phpqb init
 	
 Insert your values (phpqb.json)	
@@ -180,7 +180,7 @@ QueryCollection::create()->delete('article')->where('id', 1)->collect($collectio
 
 return $collection;
 ```
-### TODO
+## TODO
 - [ ] Standalone QueryBuilder wihtout FluentPDO
 - [ ] PHP 5.6+ compatibility
 - [ ] phpqb.json JSON lint
