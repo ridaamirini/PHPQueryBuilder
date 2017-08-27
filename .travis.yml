@@ -1,12 +1,12 @@
 language: php
  
 php:
-#    - '7.0'
+    - '7.0'
     - '7.1'
     - nightly
 
 before_script:
-  - composer install --dev
+  - composer install --no-dev
 
 addons:
   code_climate:
