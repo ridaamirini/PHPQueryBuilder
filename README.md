@@ -21,7 +21,7 @@ Add in your `composer.json`:
 
 	"require": {
 		...
-		"ridaamirini/phpquerybuilder": "0.1.*"
+		"ridaamirini/phpquerybuilder": "^0.1.1"
 	}
 
 then update your dependencies with `composer update`.
