@@ -24,11 +24,14 @@ class CommandInit extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $path = getcwd();
         $output->writeln(getcwd());
         $config = new ConfigFile();
-        //if ($config->save(getcwd()) === FALSE)  return $output->writeln('<errorr>Cannot write phpqb.json!!!</errorr>');
 
-        //$output->writeln('phpqb.json successfully created.');
+        if (!is_writable($path)) return $output->writeln('<errorr>Permission denied to write phpqb.json!!!</errorr>');
+        if ($config->save($path) === FALSE)  return $output->writeln('<errorr>Cannot write phpqb.json!!!</errorr>');
+
+        $output->writeln('phpqb.json successfully created.');
         return false;
     }
 }
