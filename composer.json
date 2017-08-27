@@ -21,7 +21,7 @@
             "App\\": "src/PHPQueryBuilder"
         }
     },
-    "name": "ridaamirini/phpbquerybuilder",
+    "name": "ridaamirini/phpquerybuilder",
     "description": "An fast, small SQL Builder based on FluentPDO",
     "license": "MIT",
     "authors": [
