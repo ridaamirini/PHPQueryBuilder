@@ -1,22 +1,23 @@
 {
-    "folder":[
-        {
-            "from": "",
-            "to":""
-        }
-    ],
-    "files":[
-        {
-            "from": "",
-            "to":""
-        },
-        {
-            "from": "",
-            "to":""
-        }
-    ],
-    "excluded_folder":[
-
-    ],
-    "defaultDestination": ""
+  "folder": [
+    {
+      "from": "./tes",
+      "to": "./db_2"
+    }
+  ],
+  "files": [
+    {
+      "from": "./test.php",
+      "to": "./db"
+    }
+  ],
+  "excludes": [
+    {
+      "path": "./tes/toExclude.php"
+    },
+    {
+      "path": "./tes/tes_exclude"
+    }
+  ],
+  "defaultDestination": "./"
 }

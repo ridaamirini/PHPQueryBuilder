@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by RidaSmart Apps UG (haftungsbeschränkt).
+ * Created by Rida Amirini.
  * Initial version by: ridaamirini
  * Initial version created on: 26.08.17 - 15:00
  */

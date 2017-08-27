@@ -42,11 +42,9 @@ class QueryCollection
 
     public function dump($path)
     {
-        try{
-            file_put_contents($path, $this->getCollection());
-        }catch (\Exception $e) {
-           throw new NoAccessException();
-        }
+        $result = file_put_contents($path, $this->getCollection());
+
+        if (!$result) throw new NoAccessException();
     }
 
     public function parse()

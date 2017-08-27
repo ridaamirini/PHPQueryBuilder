@@ -13,8 +13,22 @@ class ConfigFile
 {
     private $folder = [];
     private $files = [];
-    private $excludedFolder = [];
+    private $excludes = [];
     private $defaultDestination = '';
+
+    public function __construct($fromArray = null)
+    {
+        if (!empty($fromArray)) {
+            foreach ($fromArray as $key => $value) {
+                if (isset($this->{$key})) $this->{$key} = $value;
+            }
+
+            //Map and Clean
+            for ($i = 0; $i < count($this->folder); $i++) $this->folder[$i] = new Folder($this->folder[$i]);
+            for ($i = 0; $i < count($this->files); $i++) $this->files[$i] = new Files($this->files[$i]);
+            for ($i = 0; $i < count($this->excludes); $i++) $this->excludes[$i] = new Exclude($this->excludes[$i]);
+        }
+    }
 
     /**
      * @return array
@@ -51,17 +65,17 @@ class ConfigFile
     /**
      * @return array
      */
-    public function getExcludedFolder()
+    public function getExcludes()
     {
-        return $this->excludedFolder;
+        return $this->excludes;
     }
 
     /**
-     * @param array $excludedFolder
+     * @param array $excludes
      */
-    public function setExcludedFolder($excludedFolder)
+    public function setExcludes($excludes)
     {
-        $this->excludedFolder = $excludedFolder;
+        $this->excludes = $excludes;
     }
 
     /**
@@ -86,7 +100,7 @@ class ConfigFile
      */
     public function save($path)
     {
-        return file_put_contents($path, $this);
+        return @file_put_contents($path . '/phpqb.json', $this);
     }
 
     public function __toString()

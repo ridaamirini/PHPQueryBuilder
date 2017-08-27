@@ -12,6 +12,8 @@ error_reporting(E_ALL);
 require 'vendor/autoload.php';
 
 use App\Builder\QueryBuilder;
+use App\Schema\ConfigFile;
+use App\Schema\Folder;
 use App\Utils\QueryBuilderLiteral;
 
 $collection = new \App\Schema\QueryCollection();
@@ -87,6 +89,10 @@ QueryBuilder::create()->select('hans')
     ->orderBy('published_at DESC')
     ->limit(224)
     ->collect($collection);
+$filename = getcwd() . '/phpqb.json';
 
 
-new \App\Builder\QueryBuilderConfig();
+$config = json_decode(file_get_contents($filename), true);
+$config = new ConfigFile($config);
+
+var_dump($config);
