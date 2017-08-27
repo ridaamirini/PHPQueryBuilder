@@ -6,20 +6,39 @@
  * Time: 01:58
  */
 
+ini_set('display_errors',  'On');
+error_reporting(E_ALL);
+
 require 'vendor/autoload.php';
 
 use App\Builder\QueryBuilder;
+use App\Schema\ConfigFile;
+use App\Schema\Folder;
 use App\Utils\QueryBuilderLiteral;
 
+$collection = new \App\Schema\QueryCollection();
 
-$select = QueryBuilder::create()->select('hans')
-                                ->where('published_at > ?', 1)
-                                ->where('pab = ?', 5)
-                                ->orderBy('published_at DESC')
-                                ->limit(5)
-                                ->getQuery();
 
-var_dump($select);
+QueryBuilder::create()->select('hans')
+                      ->where('published_at > ?', 1)
+                      ->where('pab = ?', 5)
+                      ->orderBy('published_at DESC')
+                      ->limit(5)
+                      ->collect($collection);
+
+QueryBuilder::create()->select('hans')
+                      ->where('published_at > ?', 1)
+                      ->where('pab = ?', 5)
+                      ->orderBy('published_at DESC')
+                      ->limit(5)
+                      ->collect($collection);
+
+QueryBuilder::create()->select('hans')
+                      ->where('published_at > ?', 1)
+                      ->where('pa2b = ?', 5)
+                      ->orderBy('published_at DESC')
+                      ->limit(224)
+                      ->collect($collection);
 
 
 $update = QueryBuilder::create()->update('hans')
@@ -46,5 +65,34 @@ $delete = QueryBuilder::create()->delete('hans')
 
 var_dump($delete);
 
-//@todo Collection of Queries as sqldump or only query
-//@todo CLI
+
+$insertcollection = new \App\Schema\QueryCollection();
+
+
+QueryBuilder::create()->insert('dome', ['hans' => 2123, 'dalsdk' => 'daiosdaiosdj'])->collect($insertcollection);
+QueryBuilder::create()->insert('dome', ['han2s' => 2123, 'dalsdk' => 'daiosdaiosdj'])->collect($insertcollection);
+QueryBuilder::create()->insert('dome', ['ha3ns' => 2123, 'dalsdk' => 'daiosdaiosdj'])->collect($insertcollection);
+QueryBuilder::create()->insert('dome', ['ha4ns' => 2123, 'dalsdk' => 'daiosdaiosdj'])->collect($insertcollection);
+QueryBuilder::create()->insert('dome', ['ha5ns' => 2123, 'dalsdk' => 'daiosdaiosdj'])->collect($insertcollection);
+
+
+QueryBuilder::create()->select('hans')
+    ->where('published_at > ?', 1)
+    ->where('pab = ?', 5)
+    ->orderBy('published_at DESC')
+    ->limit(5)
+    ->collect($collection);
+
+QueryBuilder::create()->select('hans')
+    ->where('published_at > ?', 1)
+    ->where('pa2b = ?', 5)
+    ->orderBy('published_at DESC')
+    ->limit(224)
+    ->collect($collection);
+$filename = getcwd() . '/phpqb.json';
+
+
+$config = json_decode(file_get_contents($filename), true);
+$config = new ConfigFile($config);
+
+var_dump($config);

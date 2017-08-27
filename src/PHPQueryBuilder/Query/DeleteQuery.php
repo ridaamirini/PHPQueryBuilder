@@ -9,6 +9,8 @@
 namespace App\Query;
 
 
+use App\Schema\Query;
+use App\Schema\QueryCollection;
 use App\Utils\QueryBuilderUtils;
 
 class DeleteQuery extends \DeleteQuery implements QueryInterface
@@ -20,6 +22,17 @@ class DeleteQuery extends \DeleteQuery implements QueryInterface
     public function getQuery($formatted = true)
     {
         return QueryBuilderUtils::build(parent::getQuery(false), parent::getParameters());
+    }
+
+    /**
+     * @param $collection
+     */
+    public function collect(&$collection)
+    {
+        if (!($collection instanceof QueryCollection)) throw new \InvalidArgumentException('$collection must be an instance of QueryCollection');
+
+        $collection->add(Query::create()->setQuery($this->getQueryPDO())
+                                        ->setQueryWithValues($this->getQuery()));
     }
 
     /**

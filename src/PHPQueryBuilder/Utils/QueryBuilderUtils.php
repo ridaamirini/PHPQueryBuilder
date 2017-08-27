@@ -27,6 +27,6 @@ class QueryBuilderUtils
 
     public static function strictDataTypes($value)
     {
-        return is_numeric($value) ? $value : '`'.$value.'`';
+        return is_numeric($value) ? $value : '"'.$value.'"';
     }
 }

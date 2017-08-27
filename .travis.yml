@@ -1,21 +1,13 @@
 language: php
-
+ 
 php:
-  - 5.5
-  - 5.6
-  - 7.0
-  - hhvm
+    - '7.0'
+    - '7.1'
+    - nightly
 
-
-# optionally set up exclutions and allowed failures in the matrix
-matrix:
-  exclude:
-    - php: hhvm
-  allow_failures:
-    - php: 7.0
-    - php: hhvm
-
-# execute any number of scripts before the test run, custom env's are available as variables
 before_script:
+  - composer install --ignore-platform-reqs
 
-# use the $DB env variable to determine the phpunit.xml to use script: phpunit --configuration phpunit_$DB.xml --coverage-text
+addons:
+  code_climate:
+    repo_token:$CODECLIMATE_TT
