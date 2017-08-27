@@ -6,8 +6,8 @@
         }
     ],
     "require": {
-        "fpdo/fluentpdo": "dev-master#3a751e5d113bd49310ece4e7e618e01dc90e77f7",
-        "symfony/console": "3.4.x-dev#b789be584eeefa72bcc0d726b6da451e5d24a6df"
+        "fpdo/fluentpdo": "dev-master",
+        "symfony/console": "3.4.x-dev"
     },
     "require-dev": {
         "doctrine/instantiator": "^1.0.2",
