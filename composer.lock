@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a14325539025f58c6874384226d245e",
+    "content-hash": "66c8f6806e44fb8413adf7b370be4baa",
     "packages": [
         {
             "name": "fpdo/fluentpdo",
@@ -1729,6 +1729,8 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.0"
+    },
     "platform-dev": []
 }

@@ -6,15 +6,16 @@
         }
     ],
     "require": {
+        "php": "^7.0",
         "fpdo/fluentpdo": "1.1.1",
-        "symfony/console": "3.4.x-dev"
+        "symfony/console": "3.4.x-dev@dev"
     },
     "require-dev": {
         "doctrine/instantiator": "^1.0.2",
         "phpunit/phpunit": "^6.3"
     },
     "minimum-stability": "dev",
-    "php": "^7.0",
+
     "bin": ["bin/phpqb"],
     "autoload": {
         "psr-4":{
