@@ -41,6 +41,7 @@ QueryBuilder::create()->select('article')
                       ->where('published_at > ?', 1)
 		      ->orderBy('published_at DESC')
 		      ->limit(5)
+		      ->getQuery();
 ```
 output query is:
 
