@@ -6,7 +6,7 @@
         }
     ],
     "require": {
-        "fpdo/fluentpdo": "v1.1.1",
+        "fpdo/fluentpdo": "dev-master#3a751e5d113bd49310ece4e7e618e01dc90e77f7",
         "symfony/console": "3.4.x-dev"
     },
     "require-dev": {
