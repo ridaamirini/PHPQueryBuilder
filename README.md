@@ -180,6 +180,13 @@ QueryCollection::create()->delete('article')->where('id', 1)->collect($collectio
 
 return $collection;
 ```
+### TODO
+- [ ] Standalone QueryBuilder wihtout FluentPDO
+- [ ] PHP 5.6+ compatibility
+- [ ] phpqb.json JSON lint
+- [ ] Command phpqb dump -c ... -f **allow directory**
+- [ ] Add Unit Tests
+- [x] First release
 
 ## Licence
 
