@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9240a0892f1fde89cc70cb12285e490",
+    "content-hash": "cd1824aa702a353c6673261dd8883558",
     "packages": [
         {
             "name": "fpdo/fluentpdo",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ridaamirini/fluentpdo",
+                "url": "https://github.com/ridaamirini/fluentpdo.git",
                 "reference": "5d285416397e4765d5823ef061234f21196b32c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ridaamirini/fluentpdo/zipball/5d285416397e4765d5823ef061234f21196b32c7",
+                "reference": "5d285416397e4765d5823ef061234f21196b32c7",
+                "shasum": ""
             },
             "type": "library",
             "autoload": {
@@ -37,6 +43,9 @@
                 "dbal",
                 "pdo"
             ],
+            "support": {
+                "source": "https://github.com/ridaamirini/fluentpdo/tree/master"
+            },
             "time": "2017-08-27T18:00:03+00:00"
         },
         {
