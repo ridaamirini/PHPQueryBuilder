@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd1824aa702a353c6673261dd8883558",
+    "content-hash": "51f11623d07fc607d134ce9312e53331",
     "packages": [
         {
             "name": "fpdo/fluentpdo",
-            "version": "dev-master",
+            "version": "dev-ridaamirini",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ridaamirini/fluentpdo.git",
-                "reference": "5d285416397e4765d5823ef061234f21196b32c7"
+                "reference": "69431d38293d7d60c1d3415db5c5017db9195a60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ridaamirini/fluentpdo/zipball/5d285416397e4765d5823ef061234f21196b32c7",
-                "reference": "5d285416397e4765d5823ef061234f21196b32c7",
+                "url": "https://api.github.com/repos/ridaamirini/fluentpdo/zipball/69431d38293d7d60c1d3415db5c5017db9195a60",
+                "reference": "69431d38293d7d60c1d3415db5c5017db9195a60",
                 "shasum": ""
             },
             "type": "library",
@@ -46,7 +46,7 @@
             "support": {
                 "source": "https://github.com/ridaamirini/fluentpdo/tree/master"
             },
-            "time": "2017-08-27T18:00:03+00:00"
+            "time": "2017-08-28T14:45:58+00:00"
         },
         {
             "name": "psr/log",

@@ -7,7 +7,7 @@
     ],
     "require": {
         "php": "^7.0",
-        "fpdo/fluentpdo": "dev-master",
+        "fpdo/fluentpdo": "dev-ridaamirini",
         "symfony/console": "3.3.6"
     },
     "require-dev": {
@@ -15,6 +15,7 @@
         "phpunit/phpunit": "^6.3"
     },
     "minimum-stability": "dev",
+    "prefer-stable": false,
     "bin": ["bin/phpqb"],
     "autoload": {
         "psr-4":{
