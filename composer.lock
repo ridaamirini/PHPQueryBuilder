@@ -4,21 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "51f11623d07fc607d134ce9312e53331",
+    "content-hash": "23a7b6f89d91b4d2b55dd31556867ece",
     "packages": [
         {
             "name": "fpdo/fluentpdo",
-            "version": "dev-ridaamirini",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ridaamirini/fluentpdo.git",
-                "reference": "69431d38293d7d60c1d3415db5c5017db9195a60"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ridaamirini/fluentpdo/zipball/69431d38293d7d60c1d3415db5c5017db9195a60",
-                "reference": "69431d38293d7d60c1d3415db5c5017db9195a60",
-                "shasum": ""
+                "url": "https://github.com/ridaamirini/fluentpdo",
+                "reference": "3a751e5d113bd49310ece4e7e618e01dc90e77f7"
             },
             "type": "library",
             "autoload": {
@@ -43,10 +37,7 @@
                 "dbal",
                 "pdo"
             ],
-            "support": {
-                "source": "https://github.com/ridaamirini/fluentpdo/tree/master"
-            },
-            "time": "2017-08-28T14:45:58+00:00"
+            "time": "2017-08-25T23:59:28+00:00"
         },
         {
             "name": "psr/log",
@@ -1733,9 +1724,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "fpdo/fluentpdo": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
