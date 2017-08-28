@@ -1,7 +1,7 @@
 <?php
 
 if (!class_exists('\Symfony\Component\Console\Application')) {
-    if (file_exists($file = __DIR__.'/../../../autoload.php') || file_exists($file = __DIR__.'/../vendor/autoload.php')) {
+    if (file_exists($file = __DIR__ . '/../../../autoload.php') || file_exists($file = __DIR__ . '/../../autoload.php') || file_exists($file = __DIR__ . '/../vendor/autoload.php')) {
         require_once $file;
     }
 }
