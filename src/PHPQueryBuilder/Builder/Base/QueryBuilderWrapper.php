@@ -19,6 +19,15 @@ use App\Query\UpdateQuery;
  */
 abstract class QueryBuilderWrapper extends \FluentPDO
 {
+
+    public function __construct()
+    {
+        //QuickAndDirty | THIS IS ONLY A WORKAROUND!!!
+        $pdoDouble = \Mockery::mock('PDO');
+        parent::__construct($pdoDouble);
+    }
+
+
     /**
      * @param $table
      * @param null $primaryKey

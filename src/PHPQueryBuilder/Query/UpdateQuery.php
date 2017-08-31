@@ -36,10 +36,11 @@ class UpdateQuery extends \UpdateQuery implements QueryInterface
     }
 
     /**
+     * @param bool $formatted
      * @return string
      */
-    public function getQueryPDO()
+    public function getQueryPDO($formatted = false)
     {
-        return parent::getQuery();
+        return parent::getQuery($formatted);
     }
 }

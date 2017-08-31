@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcbabb221e13bf465f0220e998cbff62",
+    "content-hash": "94c8945df421158fdd90b75765615853",
     "packages": [
         {
             "name": "fpdo/fluentpdo",
-            "version": "dev-ridaamirini",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ridaamirini/fluentpdo.git",
-                "reference": "69431d38293d7d60c1d3415db5c5017db9195a60"
+                "url": "https://github.com/fpdo/fluentpdo.git",
+                "reference": "fa0df68d098a1ebb1b0461e4750ef2749869219c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ridaamirini/fluentpdo/zipball/69431d38293d7d60c1d3415db5c5017db9195a60",
-                "reference": "69431d38293d7d60c1d3415db5c5017db9195a60",
+                "url": "https://api.github.com/repos/fpdo/fluentpdo/zipball/fa0df68d098a1ebb1b0461e4750ef2749869219c",
+                "reference": "fa0df68d098a1ebb1b0461e4750ef2749869219c",
                 "shasum": ""
             },
             "type": "library",
@@ -26,6 +26,7 @@
                     "FluentPDO/FluentPDO.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0",
                 "GPL-2.0+"
@@ -43,10 +44,120 @@
                 "dbal",
                 "pdo"
             ],
-            "support": {
-                "source": "https://github.com/ridaamirini/fluentpdo/tree/master"
+            "time": "2016-07-08T13:40:45+00:00"
+        },
+        {
+            "name": "hamcrest/hamcrest-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hamcrest/hamcrest-php.git",
+                "reference": "10b977bd20ea6a2fcf0e32a941c9140fbdb75033"
             },
-            "time": "2017-08-28T14:45:58+00:00"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hamcrest/hamcrest-php/zipball/10b977bd20ea6a2fcf0e32a941c9140fbdb75033",
+                "reference": "10b977bd20ea6a2fcf0e32a941c9140fbdb75033",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3|^7.0"
+            },
+            "replace": {
+                "cordoval/hamcrest-php": "*",
+                "davedevelopment/hamcrest-php": "*",
+                "kodova/hamcrest-php": "*"
+            },
+            "require-dev": {
+                "phpunit/php-file-iterator": "1.3.3",
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "hamcrest"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "This is the PHP port of Hamcrest Matchers",
+            "keywords": [
+                "test"
+            ],
+            "time": "2017-04-07T19:46:20+00:00"
+        },
+        {
+            "name": "mockery/mockery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mockery/mockery.git",
+                "reference": "d1d330595a113fb2ed40bed22411af2327762f8d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/d1d330595a113fb2ed40bed22411af2327762f8d",
+                "reference": "d1d330595a113fb2ed40bed22411af2327762f8d",
+                "shasum": ""
+            },
+            "require": {
+                "hamcrest/hamcrest-php": "~2.0",
+                "lib-pcre": ">=7.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.7|~6.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Mockery": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Pádraic Brady",
+                    "email": "padraic.brady@gmail.com",
+                    "homepage": "http://blog.astrumfutura.com"
+                },
+                {
+                    "name": "Dave Marshall",
+                    "email": "dave.marshall@atstsolutions.co.uk",
+                    "homepage": "http://davedevelopment.co.uk"
+                }
+            ],
+            "description": "Mockery is a simple yet flexible PHP mock object framework for use in unit testing with PHPUnit, PHPSpec or any other testing framework. Its core goal is to offer a test double framework with a succinct API capable of clearly defining all possible object operations and interactions using a human readable Domain Specific Language (DSL). Designed as a drop in alternative to PHPUnit's phpunit-mock-objects library, Mockery is easy to integrate with PHPUnit and can operate alongside phpunit-mock-objects without the World ending.",
+            "homepage": "http://github.com/mockery/mockery",
+            "keywords": [
+                "BDD",
+                "TDD",
+                "library",
+                "mock",
+                "mock objects",
+                "mockery",
+                "stub",
+                "test",
+                "test double",
+                "testing"
+            ],
+            "time": "2017-08-22T07:19:24+00:00"
         },
         {
             "name": "psr/log",
@@ -1733,7 +1844,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "fpdo/fluentpdo": 20
+        "mockery/mockery": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

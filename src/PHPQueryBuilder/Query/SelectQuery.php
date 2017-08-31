@@ -19,7 +19,7 @@ class SelectQuery extends \SelectQuery implements QueryInterface
      * @param bool $formatted
      * @return string
      */
-    public function getQuery($formatted = true)
+    public function getQuery($formatted = false)
     {
         return QueryBuilderUtils::build(parent::getQuery(false), parent::getParameters());
     }
@@ -36,10 +36,11 @@ class SelectQuery extends \SelectQuery implements QueryInterface
     }
 
     /**
+     * @param bool $formatted
      * @return string
      */
-    public function getQueryPDO()
+    public function getQueryPDO($formatted = false)
     {
-        return parent::getQuery();
+        return parent::getQuery($formatted);
     }
 }

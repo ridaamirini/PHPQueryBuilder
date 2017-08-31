@@ -51,7 +51,21 @@ class CommandDump extends Command
         if (!$content) throw new \InvalidArgumentException('collection must be an instance of QueryCollection');
 
         if (!empty($filename)) {
+
+            if (is_dir($filename)) {
+                $filename = $filename .
+                            (substr($filename, -1) === '/' ? null : '/') .
+                            pathinfo($collection, PATHINFO_FILENAME) . '.sql';
+            }
+
             $content->dump($filename);
+
+            $output->writeln([
+                '',
+                'Successfully created: ' . $filename,
+                '',
+            ]);
+
             return false;
         }
 

@@ -1,14 +1,9 @@
 {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ridaamirini/fluentpdo"
-        }
-    ],
     "require": {
         "php": "^7.0",
         "fpdo/fluentpdo": "1.1.*",
-        "symfony/console": "3.3.8"
+        "symfony/console": "3.3.8",
+        "mockery/mockery": "^1.0@dev"
     },
     "require-dev": {
         "doctrine/instantiator": "^1.0.2",
